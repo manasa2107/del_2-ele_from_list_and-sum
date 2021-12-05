@@ -1,0 +1,19 @@
+n=int(input())
+s=0
+m=0
+l=[]
+p=[]
+while(n>0):
+    r=n%10
+    s+=r 
+    n=n//10
+    l.append(r)
+l.reverse()
+def func(l):
+    for i in range(2):
+        del l[0]
+    return sum(l)
+while(len(l)>1):
+    m+=func(l)
+print(s+m)
+   
